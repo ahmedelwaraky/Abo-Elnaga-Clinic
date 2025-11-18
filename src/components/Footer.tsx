@@ -14,18 +14,20 @@ const Footer = () => {
   ];
 
   const services = [
-    { text: "طب الأسنان التجميلي", href: "#cosmetic" },
-    { text: "تبييض الأسنان", href: "#whitening" },
-    { text: "زراعة الأسنان", href: "#implants" },
-    { text: "التقويم الشفاف", href: "#aligners" },
-    { text: "علاج الجذور", href: "#root-canal" },
-    { text: "الرعاية الوقائية", href: "#preventive" },
+    { text: "طب الأسنان التجميلي", href: "#" },
+    { text: "تبييض الأسنان", href: "#" },
+    { text: "زراعة الأسنان", href: "#" },
+    { text: "التقويم الشفاف والمتحرك", href: "#" },
+    { text: "علاج الجذور", href: "#" },
+    { text: "الرعاية الوقائية", href: "#" },
+    { text: "طب أسنان الأطفال", href: "#" },
+    { text: "القشور الخزفية", href: "#" },
   ];
 
   const locations = [
-    "أمام البنك الأهلي - قويسنا - المنوفية",
-    "أمام البنك الزراعي - طه شبرا - قويسنا",
-    "أمام موقف أم خنان- قويسنا - المنوفية",
+    " قويسنا - أمام البنك الأهلي - المنوفية",
+    " طه شبرا - أمام البنك الزراعي - قويسنا",
+    "العجايزة - أمام موقف أم خنان - قويسنا",
   ];
 
   return (
@@ -45,8 +47,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-background/80 text-sm leading-relaxed mb-4">
-              التميز في رعاية الأسنان مع لمسة شخصية.<br></br> شريكك الموثوق لابتسامة صحية
-              وجميلة.
+              التميز في رعاية الأسنان مع لمسة شخصية.<br></br> شريكك الموثوق
+              لابتسامة صحية وجميلة.
             </p>
             <div className="flex gap-3">
               <a
@@ -150,7 +152,7 @@ const Footer = () => {
                 <Clock className="w-5 h-5 text-accent flex-shrink-0" />
                 <div className="text-right">
                   <p className="text-background/80">
-                    السبت - الخميس: 11 صباحاً - 11 مساءً
+                    السبت - الخميس: 10 صباحاً - 10 مساءً
                   </p>
                 </div>
               </div>

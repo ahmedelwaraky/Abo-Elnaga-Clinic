@@ -139,8 +139,8 @@ const teamMembers = [
   },
   {
     id: 12,
-    nameAr: "د. آية إبراهيم",
-    nameEn: "Dr. Aya Ibrahim",
+    nameAr: "د. آيه أشرف",
+    nameEn: "Dr. Aya Ashraf",
     roleAr: "أخصائية تجميل الأسنان",
     roleEn: "Aesthetic Dentist",
     specialtyAr: "أخصائية الحشوات والتركيبات التجميلية",
@@ -244,14 +244,14 @@ const Team = () => {
                     <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
                     {/* Social Links */}
-                    <div className="flex justify-center gap-3">
+                    {/* <div className="flex justify-center gap-3">
                       <button className="group/btn p-3 rounded-xl bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 hover:rotate-6">
                         <Linkedin className="w-5 h-5" />
                       </button>
                       <button className="group/btn p-3 rounded-xl bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 hover:-rotate-6">
                         <Mail className="w-5 h-5" />
                       </button>
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Bottom Accent Line */}

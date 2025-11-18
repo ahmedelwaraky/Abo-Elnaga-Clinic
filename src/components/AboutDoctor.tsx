@@ -6,10 +6,30 @@ const AboutDoctor = () => {
   const { t, language } = useLanguage();
 
   const stats = [
-    { icon: Award, labelAr: "سنوات الخبرة", labelEn: "Years Experience", value: "+10" },
-    { icon: Users, labelAr: "المرضى السعداء", labelEn: "Happy Patients", value: "+2300" },
-    { icon: GraduationCap, labelAr: "الشهادات", labelEn: "Certifications", value: "12" },
-    { icon: Heart, labelAr: "نسبة النجاح", labelEn: "Success Rate", value: "100%" },
+    {
+      icon: Award,
+      labelAr: "سنوات الخبرة",
+      labelEn: "Years Experience",
+      value: "+12",
+    },
+    {
+      icon: Users,
+      labelAr: "المرضى السعداء",
+      labelEn: "Happy Patients",
+      value: "+2300",
+    },
+    {
+      icon: GraduationCap,
+      labelAr: "الشهادات",
+      labelEn: "Certifications",
+      value: "6",
+    },
+    {
+      icon: Heart,
+      labelAr: "نسبة النجاح",
+      labelEn: "Success Rate",
+      value: "100%",
+    },
   ];
 
   const specializations = [
@@ -21,15 +41,15 @@ const AboutDoctor = () => {
     { ar: "علاج الجذور", en: "Root Canal" },
     { ar: "تبييض الأسنان", en: "Teeth Whitening" },
     { ar: "القشور الخزفية", en: "Veneers" },
+    { ar: "طب أسنان الأطفال", en: "Pediatric Dentistry" },
   ];
 
   return (
     <section id="about" className="py-20 bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-
           {/* صورة الدكتور */}
-            <div className="relative animate-scale-in order-2 lg:order-1">
+          <div className="relative animate-scale-in order-2 lg:order-1">
             <div className="relative rounded-2xl overflow-hidden shadow-strong group bg-white dark:bg-white">
               <img
                 src={doctorImage}
@@ -45,7 +65,7 @@ const AboutDoctor = () => {
                 language === "ar" ? "-left-6" : "-right-6"
               } bg-accent text-accent-foreground p-6 rounded-xl shadow-strong animate-float`}
             >
-              <div className="text-3xl font-bold">+10</div>
+              <div className="text-3xl font-bold">+12</div>
               <div className="text-sm font-medium">
                 {t("سنة خبرة", "Years Experience")}
               </div>
@@ -63,8 +83,8 @@ const AboutDoctor = () => {
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
               {t(
-                " أخصائي طب وجراحة الفم والأسنان",
-                "Consultant of Cosmetic & Restorative Dentistry"
+                "أخصائي طب وجراحة الفم وتقويم الأسنان",
+                "Specialist in Oral Surgery and Orthodontics"
               )}
             </p>
 
@@ -72,8 +92,8 @@ const AboutDoctor = () => {
             <div className="space-y-4 mb-8">
               <p className="text-foreground leading-relaxed">
                 {t(
-                  "الدكتور أحمد أبو النجا بخبرة أكثر من 10 سنوات في مجال طب الأسنان منذ تخرجه عام 2013. حاصل على بكالوريوس طب وجراحة الفم والأسنان، ودبلوم متقدم في زراعة الأسنان والتجميل. تخصص الدكتور أحمد في علاج جذور الأسنان وتركيبات الأسنان التجميلية، ويسعى دائمًا لمواكبة أحدث التقنيات لتقديم أفضل رعاية لمرضاه.",
-                  "With over 10 years of experience in dentistry since graduating in 2013, Dr. Ahmed Abo Elnaga holds a Bachelor's degree in Dental Surgery and an advanced diploma in implantology and aesthetics. He specializes in root canal treatments and cosmetic restorations, continuously adopting the latest techniques to ensure the best care for his patients."
+                  "الدكتور أحمد أبو النجا بخبرة أكثر من 12 سنة في مجال طب الأسنان منذ تخرجه عام 2013. حاصل على بكالوريوس طب وجراحة الفم والأسنان، ودبلوم متقدم في زراعة الأسنان والتجميل ودبلوم متقدم في تقويم الأسنان. تخصص الدكتور أحمد في تقويم الأسنان، ويسعى دائمًا لمواكبة أحدث التقنيات لتقديم أفضل رعاية لمرضاه.",
+                  "With over 12 years of experience in dentistry since graduating in 2013, Dr. Ahmed Abo Elnaga holds a Bachelor's degree in Dental Surgery, an advanced diploma in implantology and aesthetics, and an advanced diploma in orthodontics. He specializes in orthodontics and continuously keeps up with the latest technologies to provide the best care for his patients."
                 )}
               </p>
             </div>
@@ -84,8 +104,10 @@ const AboutDoctor = () => {
                 {t("التخصصات", "Specializations")}
               </h3>
               <div
-                className={`flex flex-wrap gap-3 ${
-                  language === "ar" ? "justify-end" : "justify-start"
+                className={`grid gap-3 ${
+                  language === "ar"
+                    ? "grid-cols-3 justify-items-start"
+                    : "grid-cols-3 justify-items-end"
                 }`}
               >
                 {specializations.map((spec, index) => (
@@ -109,7 +131,9 @@ const AboutDoctor = () => {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <stat.icon className="w-8 h-8 mx-auto mb-2 text-primary group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" />
-                  <div className="text-2xl font-bold text-foreground">{stat.value}</div>
+                  <div className="text-2xl font-bold text-foreground">
+                    {stat.value}
+                  </div>
                   <div className="text-xs text-muted-foreground">
                     {t(stat.labelAr, stat.labelEn)}
                   </div>
